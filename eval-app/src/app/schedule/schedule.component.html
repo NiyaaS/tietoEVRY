@@ -1,0 +1,31 @@
+<!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Filter
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div> -->
+<full-calendar 
+    #calendar
+    *ngIf="options"
+    defaultView="dayGridMonth"
+    [eventLimit]= "options.eventLimit"
+    [weekNumbers]= "options.weekNumbers"
+    [plugins]="options.plugins"
+    [events]="events" 
+    [locales]="options.locales"
+    (eventRender)="eventRendered($event)"
+    [customButtons]="options.customButtons"
+    [header]="options.header"
+      
+    >
+</full-calendar>
+<div class="summary-container">
+  <h2>SUMMARY</h2>
+</div>
+
+<!-- [eventLimitClick] = "default" -->
+<!-- [options]="calendarOptions" -->
